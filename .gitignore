@@ -3,3 +3,4 @@ Input/
 node_modules/
 .vercel
 *.log
+.claude/
