@@ -70,7 +70,17 @@
       </div>
     </div>
     <div class="hero-photo reveal">
-      <img src="assets/portrait.png" alt="Адриана Гомонай" class="hero-portrait" />
+      <div class="photo-circle">
+        <img src="assets/portrait.png" alt="Адриана Гомонай" class="hero-portrait" />
+      </div>
+      <svg class="circle-text" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <path id="circlePath" d="M 100, 100 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0" />
+        </defs>
+        <text>
+          <textPath href="#circlePath" data-i18n="circle-text">свобода · правда · выбор · душа · свобода · правда · выбор · душа · </textPath>
+        </text>
+      </svg>
     </div>
   </div>
   <div class="hero-marquee" aria-hidden="true">
@@ -81,6 +91,43 @@
     </div>
   </div>
 </header>
+
+<!-- THREE PILLARS -->
+<section class="pillars">
+  <div class="container">
+    <div class="pillars-grid">
+      <div class="pillar reveal">
+        <span class="pillar-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="16" cy="13" r="6"/>
+            <path d="M11 18l-2 10 7-4 7 4-2-10"/>
+          </svg>
+        </span>
+        <h4 data-i18n="pillar-1-h">Сертифицированный опыт</h4>
+        <p data-i18n="pillar-1-p">Международные сертификации WPG Academy и University of Michigan, годы практики с клиентами в разных странах.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 28s-9-6-9-14a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 8-9 14-9 14z"/>
+          </svg>
+        </span>
+        <h4 data-i18n="pillar-2-h">Персональный подход</h4>
+        <p data-i18n="pillar-2-p">Каждый человек уникален. Я работаю с твоей историей, телом и системой — не по шаблону, а от твоей реальной точки.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 22l6-6 4 4 10-10"/>
+            <path d="M20 10h6v6"/>
+          </svg>
+        </span>
+        <h4 data-i18n="pillar-3-h">Реальные результаты</h4>
+        <p data-i18n="pillar-3-p">Не разовые инсайты, а долгосрочные изменения мышления, отношений и жизни. Подтверждено десятками кейсов.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section id="about" class="section section-cream">
@@ -226,9 +273,18 @@
   </div>
 </section>
 
+<!-- CTA BANNER 1 -->
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <p data-i18n="banner-1">Готова перестать жить «как надо» и начать жить свою жизнь?</p>
+    <a href="#contact" class="btn btn-light" data-i18n="banner-cta">Записаться →</a>
+  </div>
+</section>
+
 <!-- OUTCOMES -->
-<section class="section section-cream">
+<section class="section section-cream values-section">
   <div class="container">
+    <div class="vertical-text" aria-hidden="true">VALUES · VALUES · VALUES ·</div>
     <div class="section-head reveal">
       <div class="section-eyebrow" data-i18n="out-eye">что ты получаешь</div>
       <h2 class="display center"><span data-i18n="out-h2-1">Не</span> <em data-i18n="out-h2-em">советы.</em><br/><span data-i18n="out-h2-2">Изменения.</span></h2>

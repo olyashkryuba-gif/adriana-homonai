@@ -308,47 +308,153 @@ p + p { margin-top: 1rem; }
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 20px 20px 30px;
+  align-items: center;
+  aspect-ratio: 1;
+  max-width: 540px;
+  margin: 0 auto;
+  width: 100%;
 }
-.hero-photo::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 88%;
-  height: calc(100% - 40px);
-  border: 1.5px solid var(--burgundy);
-  border-radius: 4px;
-  opacity: 0.6;
-  z-index: 0;
-  transition: transform 0.6s var(--ease);
-}
-.hero-photo:hover::before {
-  transform: translate(-6px, 6px);
+.photo-circle {
+  position: relative;
+  z-index: 2;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--cream-2);
+  box-shadow: 0 30px 60px -20px rgba(43, 26, 31, 0.35),
+              0 0 0 1px rgba(122, 29, 53, 0.15);
 }
 .hero-portrait {
-  position: relative;
-  z-index: 1;
   width: 100%;
-  max-width: 480px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
   display: block;
-  border-radius: 4px;
-  box-shadow: 0 30px 60px -20px rgba(43, 26, 31, 0.35);
-  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
-  margin-left: auto;
+  transition: transform 0.8s var(--ease);
 }
-.hero-photo:hover .hero-portrait {
-  transform: translate(4px, -4px);
-  box-shadow: 0 40px 70px -20px rgba(43, 26, 31, 0.45);
+.photo-circle:hover .hero-portrait { transform: scale(1.04); }
+
+.circle-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: rotate-circle 32s linear infinite;
+}
+.circle-text text {
+  font-family: var(--sans);
+  font-size: 8.5px;
+  font-weight: 500;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  fill: var(--burgundy);
+}
+@keyframes rotate-circle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 860px) {
   .hero { padding: 120px 24px 0; }
   .hero-grid { grid-template-columns: 1fr; padding: 20px 0 60px; }
   .hero-meta { grid-template-columns: 1fr; gap: 14px; }
-  .hero-photo { max-width: 400px; margin: 0 auto; padding: 16px 16px 24px; }
+  .hero-photo { max-width: 400px; }
 }
+
+/* ===== Three Pillars ===== */
+.pillars {
+  background: var(--cream-soft);
+  padding: clamp(50px, 6vw, 80px) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+@media (max-width: 860px) { .pillars-grid { grid-template-columns: 1fr; gap: 32px; } }
+.pillar {
+  text-align: center;
+  padding: 0 32px;
+  border-right: 1px solid var(--line);
+}
+.pillar:last-child { border-right: none; }
+@media (max-width: 860px) {
+  .pillar { border-right: none; padding: 0 16px; }
+  .pillar:not(:last-child) { border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+}
+.pillar-icon {
+  display: inline-flex;
+  width: 28px; height: 28px;
+  color: var(--burgundy);
+  margin-bottom: 14px;
+}
+.pillar-icon svg { width: 100%; height: 100%; }
+.pillar h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.pillar p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  background: var(--burgundy-deep);
+  color: var(--cream);
+  padding: 36px 0;
+}
+.cta-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cta-banner p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: var(--cream);
+  margin: 0;
+  flex: 1;
+  min-width: 260px;
+  max-width: 720px;
+}
+.cta-banner .btn-light {
+  flex-shrink: 0;
+}
+
+/* ===== Vertical decorative text ===== */
+.values-section { position: relative; overflow: hidden; }
+.vertical-text {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: rgba(122, 29, 53, 0.18);
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+@media (max-width: 1100px) { .vertical-text { display: none; } }
 
 .hero-marquee {
   border-top: 1px solid var(--line);
