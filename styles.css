@@ -391,7 +391,7 @@ p + p { margin-top: 1rem; }
 }
 .pillar-icon {
   display: inline-flex;
-  width: 28px; height: 28px;
+  width: 22px; height: 22px;
   color: var(--burgundy);
   margin-bottom: 14px;
 }
@@ -521,12 +521,12 @@ p + p { margin-top: 1rem; }
 .cred-icon {
   display: inline-flex;
   align-items: center; justify-content: center;
-  width: 28px; height: 28px;
+  width: 22px; height: 22px;
   color: var(--burgundy);
   margin-bottom: 10px;
   transition: transform 0.3s var(--ease);
 }
-.cred-icon svg { width: 22px; height: 22px; }
+.cred-icon svg { width: 18px; height: 18px; }
 .cred-item:hover .cred-icon { transform: scale(1.1); }
 .cred-title {
   font-family: var(--serif);
@@ -631,12 +631,12 @@ p + p { margin-top: 1rem; }
 .card-icon {
   display: inline-flex;
   align-items: center; justify-content: center;
-  width: 32px; height: 32px;
+  width: 24px; height: 24px;
   color: var(--burgundy);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   transition: transform 0.4s var(--ease);
 }
-.card-icon svg { width: 24px; height: 24px; }
+.card-icon svg { width: 20px; height: 20px; }
 .method-card:hover .card-icon { transform: scale(1.1) rotate(-4deg); }
 .method-card h3 {
   font-family: var(--serif); font-weight: 600;
@@ -699,12 +699,12 @@ p + p { margin-top: 1rem; }
 .outcomes .out-icon {
   display: inline-flex;
   align-items: center; justify-content: center;
-  width: 32px; height: 32px;
+  width: 24px; height: 24px;
   color: var(--burgundy);
   flex-shrink: 0;
   transition: transform 0.3s var(--ease);
 }
-.outcomes .out-icon svg { width: 24px; height: 24px; }
+.outcomes .out-icon svg { width: 20px; height: 20px; }
 .outcomes li:hover .out-icon { transform: scale(1.1); }
 .outcomes h3 {
   font-family: var(--serif); font-weight: 600;
@@ -838,12 +838,12 @@ p + p { margin-top: 1rem; }
 .format-icon {
   display: inline-flex;
   align-items: center; justify-content: center;
-  width: 32px; height: 32px;
+  width: 24px; height: 24px;
   margin: 0 auto 14px;
   color: var(--burgundy);
   transition: transform 0.3s var(--ease);
 }
-.format-icon svg { width: 24px; height: 24px; }
+.format-icon svg { width: 20px; height: 20px; }
 .format-card:hover .format-icon { transform: scale(1.1); }
 .format-card h3 {
   font-family: var(--serif); font-weight: 600;
@@ -955,7 +955,7 @@ p + p { margin-top: 1rem; }
   color: var(--burgundy-deep);
 }
 .contact-icon {
-  width: 48px; height: 48px;
+  width: 24px; height: 24px;
   color: var(--cream);
   margin-bottom: 0;
   transition: color 0.3s var(--ease);
