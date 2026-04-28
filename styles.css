@@ -479,18 +479,24 @@ p + p { margin-top: 1rem; }
   overflow: hidden;
   background: var(--cream);
   position: relative;
+  width: 100%;
 }
 .marquee-track {
-  display: flex; gap: 40px;
+  display: flex;
+  gap: 0;
+  width: max-content;
   white-space: nowrap;
-  animation: marquee 40s linear infinite;
+  animation: marquee 50s linear infinite;
   font-family: var(--serif); font-style: italic;
   font-size: 1.1rem; color: var(--burgundy);
   letter-spacing: 0.04em;
 }
+.marquee-track span {
+  padding-right: 0;
+}
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-33.33%); }
+  to { transform: translateX(-25%); }
 }
 
 /* ===== About ===== */
